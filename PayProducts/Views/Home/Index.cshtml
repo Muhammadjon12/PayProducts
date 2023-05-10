@@ -1,0 +1,27 @@
+﻿@Model PayProduct.ViewModels.HomeIndexViewModels;
+@{
+    ViewData["Title"] = "Products";
+}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>PayTime</th>
+            <th>Protsent</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.products)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.PayTime</td>
+                <td>@product.Protsent</td>
+            </tr>
+            
+        }
+    </tbody>
+ @Model.getproductsInfo
+      
+    
+</table>
